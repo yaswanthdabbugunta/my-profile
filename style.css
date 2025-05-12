@@ -1,20 +1,12 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body, html {
   height: 100%;
-  font-family: Arial, sans-serif;
-}
-.left-panel {
-  width: 30%;
-  background-color: #007BFF; /* Blue color */
-  min-height: 100vh; /* ensure full height */
-  color: white;
-  padding: 20px;
 }
 
 .container {
@@ -25,11 +17,27 @@ body, html {
 
 .left-panel {
   width: 30%;
-  background-color: #007BFF; /* Blue color */
+  background-color: #6610f2; /* Bright purple */
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.left-panel button {
+  width: 80%;
+  padding: 10px 0;
+  background-color: white;
+  color: orangered;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .right-panel {
   width: 70%;
-  padding: 40px;
-  background-color: #f8f9fa;
+  background-color: white;
+  padding: 20px;
 }
