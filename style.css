@@ -9,6 +9,13 @@ body, html {
   height: 100%;
   font-family: Arial, sans-serif;
 }
+.left-panel {
+  width: 30%;
+  background-color: #007BFF; /* Blue color */
+  min-height: 100vh; /* ensure full height */
+  color: white;
+  padding: 20px;
+}
 
 .container {
   display: flex;
