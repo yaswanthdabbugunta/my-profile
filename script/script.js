@@ -4,27 +4,13 @@ function showContent(section) {
   let filePath = '';
 
   switch (section) {
-    case 'home':
-      filePath = 'menu/home.html'; // load summary.html content here as home.html
-      break;
-    case 'about':
-      filePath = 'menu/about.html';
-      break;
-    case 'skills':
-      filePath = 'menu/skills.html';
-      break;
-    case 'experience':
-      filePath = 'menu/experience.html';
-      break;
-    case 'projects':
-      filePath = 'menu/projects.html';
-      break;
-    case 'education':
-      filePath = 'menu/education.html';
-      break;
-    case 'contact':
-      filePath = 'menu/contact.html';
-      break;
+    case 'home': filePath = 'home.html'; break;
+    case 'about': filePath = 'about.html'; break;
+    case 'skills': filePath = 'skills.html'; break;
+    case 'experience': filePath = 'experience.html'; break;
+    case 'projects': filePath = 'projects.html'; break;
+    case 'education': filePath = 'education.html'; break;
+    case 'contact': filePath = 'contact.html'; break;
     default:
       contentArea.innerHTML = '<p>Content not found.</p>';
       contentArea.style.display = 'block';
@@ -40,7 +26,7 @@ function showContent(section) {
     .then(htmlContent => {
       contentArea.innerHTML = htmlContent;
       contentArea.style.display = 'block';
-      homeContent.style.display = 'none'; // Hide home content when loading other pages
+      homeContent.style.display = 'none';
     })
     .catch(() => {
       contentArea.innerHTML = '<p>Sorry, content could not be loaded.</p>';
@@ -49,6 +35,7 @@ function showContent(section) {
     });
 }
 
+// Typing animation
 const element = document.getElementById('role');
 const texts = ["DevOps Engineer", "Cloud and DevOps Engineer"];
 let textIndex = 0;
@@ -74,7 +61,6 @@ function typeEffect() {
       }, 1000);
       return;
     } else {
-      // Final word typed, stop typing animation
       return;
     }
   }
