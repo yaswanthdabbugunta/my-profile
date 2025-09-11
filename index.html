@@ -1,47 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yaswanth Dabbugunta | Portfolio</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yaswanth Dabbugunta - Cloud & DevOps Engineer Portfolio" />
+    <title>Yaswanth | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <div class="profile">
-        <img src="images/Photo.jpg" alt="Profile Picture" />
-        <h2>Yaswanth Dabbugunta</h2>
-        <p><a href="#">Cloud and DevOps Engineer</a></p>
-      </div>
-      <nav class="menu">
-        <a href="#" onclick="showContent('home'); return false;">Home</a>
-        <a href="#" onclick="showContent('about'); return false;">About</a>
-        <a href="#" onclick="showContent('skills'); return false;">Skills</a>
-        <a href="#" onclick="showContent('experience'); return false;">Experience</a>
-        <a href="#" onclick="showContent('projects'); return false;">Projects</a>
-        <a href="#" onclick="showContent('education'); return false;">Education</a>
-        <a href="#" onclick="showContent('contact'); return false;">Contact</a>
-      </nav>
-    </aside>
+    <nav class="navbar">
+        <div class="logo">Yaswanth Dabbugunta</div>
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <main class="main-content">
-      <div id="homeContent" class="intro">
-        <div>
-          <h1>I am a<br><strong><span class="animated-text" id="role"></span></strong></h1>
-          <p>at Fintuple Technologies</p>
-          <button onclick="document.getElementById('contentArea').scrollIntoView({ behavior: 'smooth' });">View Portfolio</button>
+    <!-- Hero Section -->
+    <div id="particles-js">
+        <section class="hero">
+            <div class="hero-left">
+                <p class="tagline">Cloud & DevOps Engineer</p>
+                <h1>Hi, I am <span>Yaswanth Dabbugunta</span> <br>working as a Cloud and DevOps Engineer at Fintuple Technologies.</h1>
+                <div class="buttons">
+                    <a href="#" class="btn primary">Hire me</a>
+                    <a href="assets/Yaswanth-Dabbugunta-Cloud&DevOps.pdf" class="btn outline" download aria-label="Download CV">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="bg-skew"></div>
+                <img src="assets/Yaswanth.jpg" alt="Yaswanth" />
+            </div>
+        </section>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="assets/Yaswanth.jpg" alt="Profile Picture">
+                </div>
+                <div class="about-content">
+                    <h5 class="section-subtitle">MY INTRODUCTION</h5>
+                    <h2>About Me</h2>
+                    <p>
+                        Hello! I'm Yaswanth Dabbugunta, I am a dedicated Cloud & DevOps Engineer with 2 years of hands-on experience in designing, deploying, and automating cloud infrastructure and CI/CD pipelines. I have worked extensively in the BFSI domain, delivering scalable and secure solutions on Azure and AWS. My expertise includes Kubernetes (AKS/EKS), Docker, CI/CD tools (Azure DevOps, Jenkins, GitHub Actions), and infrastructure as code (Terraform). I am skilled in implementing monitoring, security scanning (SonarQube, Trivy, OWASP ZAP, Burp Suite), and cost-optimized cloud solutions. I have also driven internal DevOps automation projects using Azure Container Apps and modern web technologies. I am passionate about continuous learning, optimizing workflows, and contributing to efficient, secure, and high-performing systems</p>
+                    <div class="about-details">
+                        <p><strong>Name:</strong> Yaswanth Dabbugunta</p>
+                        <p><strong>Date of birth:</strong> September 21, 2001</p>
+                        <p><strong>Address:</strong> Nellore, Andhra Pradesh, India</p>
+                        <p><strong>Zip code:</strong> 524137</p>
+                        <p><strong>Email:</strong> yaswanthdabbugunta@gmail.com</p>
+                        <p><strong>Phone:</strong> +91-6302642726</p>
+                    </div>
+                    <div class="interests">
+                        <span><i class="fas fa-futbol"></i> Sports</span>
+                        <span><i class="fas fa-plane"></i> Travel</span>
+                        <span><i class="fas fa-music"></i> Music</span>
+                        <span><i class="fas fa-gamepad"></i> Gaming</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-image">
-          <img src="images/Photo.jpg" alt="Designer" />
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-slider">
+            <div class="skills-track">
+                <!-- Skill Cards x2 for seamless loop -->
+                <!-- 1st Set - Only skills with existing images -->
+                <div class="skill-card">
+                    <img src="./assets/linux.png" class="skill-icon" alt="Linux" />
+                    <h4>Linux</h4>
+                    <div class="level-label">90%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/maven.png" class="skill-icon" alt="Maven" />
+                    <h4>Maven</h4>
+                    <div class="level-label">95%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/npm.png" class="skill-icon" alt="NPM" />
+                    <h4>NPM</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/jenkins.png" class="skill-icon" alt="Jenkins" />
+                    <h4>Jenkins</h4>
+                    <div class="level-label">90%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/github.png" class="skill-icon" alt="GitHub Actions" />
+                    <h4>GitHub Actions</h4>
+                    <div class="level-label">92%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/tomcat.png" class="skill-icon" alt="Apache Tomcat" />
+                    <h4>Apache Tomcat</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/git.png" class="skill-icon" alt="Git" />
+                    <h4>Git</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/github.png" class="skill-icon" alt="GitHub" />
+                    <h4>GitHub</h4>
+                    <div class="level-label">90%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/azure-repos.png" class="skill-icon" alt="Azure Repos" />
+                    <h4>Azure Repos</h4>
+                    <div class="level-label">95%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/shell-scripting.png" class="skill-icon" alt="Shell Scripting" />
+                    <h4>Shell Scripting</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/Nexus_Repository_logo_stacked.webp" class="skill-icon" alt="Nexus" />
+                    <h4>Nexus</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/AzureArtifacts.jpg" class="skill-icon" alt="Azure Artifacts" />
+                    <h4>Azure Artifacts</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/sonarqube.png" class="skill-icon" alt="SonarQube" />
+                    <h4>SonarQube</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/trivy-1.png" class="skill-icon" alt="Trivy" />
+                    <h4>Trivy</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/npm.png" class="skill-icon" alt="NPM Audit" />
+                    <h4>NPM Audit</h4>
+                    <div class="level-label">88%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/mend.png" class="skill-icon" alt="MendBolt" />
+                    <h4>MendBolt</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/snyk.png" class="skill-icon" alt="Snyk" />
+                    <h4>Snyk</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/zap.png" class="skill-icon" alt="OWASP ZAP" />
+                    <h4>OWASP ZAP</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/prometheus-01.webp" class="skill-icon" alt="Prometheus" />
+                    <h4>Prometheus</h4>
+                    <div class="level-label">77%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/grafana.webp" class="skill-icon" alt="Grafana" />
+                    <h4>Grafana</h4>
+                    <div class="level-label">75%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/ansible.jpg" class="skill-icon" alt="Ansible" />
+                    <h4>Ansible</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/aws.png" class="skill-icon" alt="AWS" />
+                    <h4>AWS</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/azure.png" class="skill-icon" alt="Azure" />
+                    <h4>Azure</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/Docker.png" class="skill-icon" alt="Docker" />
+                    <h4>Docker</h4>
+                    <div class="level-label">95%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/kubernetes.png" class="skill-icon" alt="Kubernetes" />
+                    <h4>Kubernetes</h4>
+                    <div class="level-label">95%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/docker-swarm.png" class="skill-icon" alt="Docker Swarm" />
+                    <h4>Docker Swarm</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/nginx.png" class="skill-icon" alt="Nginx" />
+                    <h4>Nginx</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/terraform01.webp" class="skill-icon" alt="Terraform" />
+                    <h4>Terraform</h4>
+                    <div class="level-label">70%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/intune.png" class="skill-icon" alt="Microsoft Intune" />
+                    <h4>Microsoft Intune</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/html.png" class="skill-icon" alt="HTML" />
+                    <h4>HTML</h4>
+                    <div class="level-label">75%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/css.png" class="skill-icon" alt="CSS" />
+                    <h4>CSS</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/bootstrap.png" class="skill-icon" alt="Bootstrap" />
+                    <h4>Bootstrap</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/javascript.png" class="skill-icon" alt="JavaScript" />
+                    <h4>JavaScript</h4>
+                    <div class="level-label">65%</div>
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="skill-card">
+                    <img src="./assets/linux.png" class="skill-icon" alt="Linux" />
+                    <h4>Linux</h4>
+                    <div class="level-label">90%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/maven.png" class="skill-icon" alt="Maven" />
+                    <h4>Maven</h4>
+                    <div class="level-label">95%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/npm.png" class="skill-icon" alt="NPM" />
+                    <h4>NPM</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/jenkins.png" class="skill-icon" alt="Jenkins" />
+                    <h4>Jenkins</h4>
+                    <div class="level-label">90%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/github.png" class="skill-icon" alt="GitHub Actions" />
+                    <h4>GitHub Actions</h4>
+                    <div class="level-label">92%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/tomcat.png" class="skill-icon" alt="Apache Tomcat" />
+                    <h4>Apache Tomcat</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/git.png" class="skill-icon" alt="Git" />
+                    <h4>Git</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/github.png" class="skill-icon" alt="GitHub" />
+                    <h4>GitHub</h4>
+                    <div class="level-label">90%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/azure-repos.png" class="skill-icon" alt="Azure Repos" />
+                    <h4>Azure Repos</h4>
+                    <div class="level-label">95%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/shell-scripting.png" class="skill-icon" alt="Shell Scripting" />
+                    <h4>Shell Scripting</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/Nexus_Repository_logo_stacked.webp" class="skill-icon" alt="Nexus" />
+                    <h4>Nexus</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/AzureArtifacts.jpg" class="skill-icon" alt="Azure Artifacts" />
+                    <h4>Azure Artifacts</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/sonarqube.png" class="skill-icon" alt="SonarQube" />
+                    <h4>SonarQube</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/trivy-1.png" class="skill-icon" alt="Trivy" />
+                    <h4>Trivy</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/npm.png" class="skill-icon" alt="NPM Audit" />
+                    <h4>NPM Audit</h4>
+                    <div class="level-label">88%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/mend.png" class="skill-icon" alt="MendBolt" />
+                    <h4>MendBolt</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/snyk.png" class="skill-icon" alt="Snyk" />
+                    <h4>Snyk</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/zap.png" class="skill-icon" alt="OWASP ZAP" />
+                    <h4>OWASP ZAP</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/prometheus-01.webp" class="skill-icon" alt="Prometheus" />
+                    <h4>Prometheus</h4>
+                    <div class="level-label">77%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/grafana.webp" class="skill-icon" alt="Grafana" />
+                    <h4>Grafana</h4>
+                    <div class="level-label">75%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/ansible.jpg" class="skill-icon" alt="Ansible" />
+                    <h4>Ansible</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/aws.png" class="skill-icon" alt="AWS" />
+                    <h4>AWS</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/azure.png" class="skill-icon" alt="Azure" />
+                    <h4>Azure</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/Docker.png" class="skill-icon" alt="Docker" />
+                    <h4>Docker</h4>
+                    <div class="level-label">95%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/kubernetes.png" class="skill-icon" alt="Kubernetes" />
+                    <h4>Kubernetes</h4>
+                    <div class="level-label">95%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/docker-swarm.png" class="skill-icon" alt="Docker Swarm" />
+                    <h4>Docker Swarm</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/nginx.png" class="skill-icon" alt="Nginx" />
+                    <h4>Nginx</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/terraform01.webp" class="skill-icon" alt="Terraform" />
+                    <h4>Terraform</h4>
+                    <div class="level-label">70%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/intune.png" class="skill-icon" alt="Microsoft Intune" />
+                    <h4>Microsoft Intune</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/html.png" class="skill-icon" alt="HTML" />
+                    <h4>HTML</h4>
+                    <div class="level-label">75%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/css.png" class="skill-icon" alt="CSS" />
+                    <h4>CSS</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/bootstrap.png" class="skill-icon" alt="Bootstrap" />
+                    <h4>Bootstrap</h4>
+                    <div class="level-label">80%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/javascript.png" class="skill-icon" alt="JavaScript" />
+                    <h4>JavaScript</h4>
+                    <div class="level-label">65%</div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div id="contentArea" style="display: none;"></div>
-    </main>
-  </div>
 
-  <script src="script/script.js"></script>
+
+    <section id="projects" class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Cloud-Native Application Deployment for a Leading BFSI Client (Azure)</h3>
+                <ul>
+                    <li>Designed and maintained CI/CD pipelines in Azure DevOps, integrating automated builds, tests, and deployments for microservices.</li>
+                    <li>Automated infrastructure tasks using Shell scripts and Batch scripts, reducing manual interventions.</li>
+                    <li>Deployed applications on Azure Kubernetes Service (AKS) using Docker and Docker Compose.</li>
+                    <li>Configured and managed NGINX Ingress Controller for secure routing and high availability.</li>
+                    <li>Integrated SonarQube, Trivy, and MendBolt into pipelines to enforce security and compliance standards.</li>
+                    <li>Managed artifacts using Azure Artifacts and version control with Azure Repos.</li>
+                  </ul>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Cloud-Native Application Deployment for a Major BFSI Client (AWS)</h3>
+                <ul>
+                    <li>Containerized applications with Docker and deployed them on EKS (Elastic Kubernetes Service).</li>
+                    <li>Implemented traffic management using AWS Application Load Balancer (ALB) instead of Ingress Controller.</li>
+                    <li>Built and managed CI/CD pipelines with GitHub Actions, integrating quality and security scans using SonarQube, Trivy, OWASP ZAP, and Burp Suite.</li>
+                    <li>Managed repositories using Nexus and source control with GitHub.</li>
+                  </ul>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Internal DevOps Automation Projects</h3>
+                <ul>
+                    <li>Automated deployments of Java (Spring Boot), Angular, Next.js, and Nest.js applications through GitHub Actions and Azure Pipelines.</li>
+                    <li>Deployed containerized applications to Azure Container Apps, enabling scalable and serverless container workloads.</li>
+                    <li>Conducted container vulnerability scans and dependency checks using Snyk, Trivy, and NPM Audit.</li>
+                    <li>Managed multiple projects in one Azure DevOps Organization.</li>
+                  </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" method="POST" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_url" value="https://yaswanthdabbugunta.github.io/my-profile/">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn primary" onclick="sendWhatsApp()">Send Message</button>
+                    <button type="submit" class="btn outline">Send Email</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>Yaswanth Dabbugunta</h3>
+            <p>Cloud and DevOps Engineer</p>
+            <div class="social-icons">
+                <a href="https://github.com/yaswanthdabbugunta" target="_blank" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yaswanthdabbugunta" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="ai-note">This website was developed with some assistance from AI.</p>
+            <p class="copyright">© 2025 Yaswanth Dabbugunta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optionally add particles.js for animated background -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+      particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('particles.js loaded');
+      });
+    </script>
+    -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.hero-left', { origin: 'left', distance: '50px', duration: 1000, delay: 300 });
+        ScrollReveal().reveal('.hero-right', { origin: 'right', distance: '50px', duration: 1000, delay: 500 });
+        ScrollReveal().reveal('.navbar', { origin: 'top', distance: '20px', duration: 800, delay: 200 });
+        ScrollReveal().reveal('.about-img', { origin: 'left', distance: '50px', duration: 1000, delay: 200 });
+        ScrollReveal().reveal('.about-content', { origin: 'right', distance: '50px', duration: 1000, delay: 300 });
+
+        function sendWhatsApp() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            const phone = "+91 6302642726"; 
+            const link = `https://wa.me/${phone}?text=${text}`;
+
+            window.open(link, "_blank");
+        }
+
+        // Enhanced error handling
+function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    const formAction = "https://formsubmit.co/yaswanthdabbugunta21@gmail.com";
+
+    const formData = new FormData(form);
+    fetch(formAction, {
+        method: "POST",
+        body: formData,
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+    })
+    .then(() => {
+        alert("Email sent successfully!");
+        form.reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("Failed to send email. Please try again.");
+    });
+}
+    </script>
 </body>
 </html>
