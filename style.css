@@ -603,7 +603,7 @@ body {
 
   .project-card {
     width: 95%;
-    height: 220px;
+    height: auto;
   }
 
   .footer h3 {
@@ -634,4 +634,91 @@ body {
     margin: 8px 0 0 0;
     font-weight: 500;
     letter-spacing: 0.5px;
+}
+/* Updated portfolio sections */
+.experience-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.experience-card {
+  max-width: 1100px;
+  margin: 0 auto 25px;
+  padding: 28px 32px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #a5a488;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.experience-header h3 {
+  font-size: 1.35rem;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.experience-header > span {
+  color: #777;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.experience-role {
+  color: #7e826d;
+  font-weight: 600;
+}
+
+.experience-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.experience-card li {
+  color: #555;
+  margin-bottom: 9px;
+  line-height: 1.55;
+}
+
+.project-cloud {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7e826d;
+  background: #f0f0f0;
+  padding: 4px 9px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.skills-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-section h2 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .experience-header > span {
+    white-space: normal;
+  }
+
+  .experience-card {
+    padding: 22px 20px;
+  }
 }
